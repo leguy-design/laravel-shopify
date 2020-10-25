@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('products', function() {
+Route::get('/', function() {
     $products = app(\MeinderA\LaravelShopify\Services\LaravelShopifyService::class)->getProducts();
     $products = json_decode($products);
     return view('welcome', compact(['products']));

@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
         @foreach($products->products as $product)
-
+        {{ $product->title }}
         @endforeach
     </body>
 </html>
